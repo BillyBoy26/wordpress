@@ -115,15 +115,6 @@ function boston_widgets_init() {
 		'before_title'  => '<div class="widget-title">',
 		'after_title'   => '</div>',
 	) );
-	register_sidebar( array(
-		'name'          => 'top_zone',
-		'id'            => 'top_zone',
-		'description'   => esc_html__( 'Add widgets here.', 'boston' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<div class="widget-title">',
-		'after_title'   => '</div>',
-	) );
 
 }
 add_action( 'widgets_init', 'boston_widgets_init' );

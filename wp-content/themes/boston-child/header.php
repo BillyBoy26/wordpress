@@ -25,23 +25,6 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boston' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-topbar">
-			<div class="container">
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'boston' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-				<?php do_action('boston_before_top_searchform'); ?>
-				<div class="topbar-search">
-					<?php do_action('boston_top_searchform'); ?>
-					<form action="/" method="get">
-					    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-						<span class="genericon genericon-search"></span>
-						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-					</form>
-				</div>
-			</div>
-		</div>
 
 		<div class="site-branding">
 			<div class="container">
@@ -65,6 +48,24 @@
 				<?php do_action('boston_after_site_description'); ?>
 			</div>
 		</div><!-- .site-branding -->
+
+		<div class="site-topbar">
+			<div class="container">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'boston' ); ?></button>
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+				</nav><!-- #site-navigation -->
+				<?php do_action('boston_before_top_searchform'); ?>
+				<div class="topbar-search">
+					<?php do_action('boston_top_searchform'); ?>
+					<form action="/" method="get">
+					    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
+						<span class="genericon genericon-search"></span>
+						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+					</form>
+				</div>
+			</div>
+		</div>
 
 	</header><!-- #masthead -->
 
