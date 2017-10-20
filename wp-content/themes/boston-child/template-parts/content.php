@@ -31,13 +31,15 @@
 	</aside>
 	<?php } ?>
 
+		<div class="entry-more">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Continue Reading', 'boston' ); ?></a>
+	</div>
+
+
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
-	<div class="entry-more">
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Continue Reading', 'boston' ); ?></a>
-	</div>
 
 	<footer class="entry-footer">
 		<?php //boston_entry_footer(); ?>
