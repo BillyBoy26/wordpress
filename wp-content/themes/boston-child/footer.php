@@ -25,9 +25,7 @@
 					<?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?>
 				</p>
 			</div><!-- .site-info -->
-			<div class="theme-info">
-				<?php do_action('boston_theme_info'); ?>
-			</div>
+
 		</div>
 	</footer><!-- #colophon -->
 

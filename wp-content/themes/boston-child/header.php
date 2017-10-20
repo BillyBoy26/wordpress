@@ -25,7 +25,6 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boston' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-
 		<div class="site-branding">
 			<div class="container">
 				<?php
@@ -47,6 +46,11 @@
 				endif; ?>
 				<?php do_action('boston_after_site_description'); ?>
 			</div>
+			 <?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+ 				<div id="header-widget-area" class="social-icons-widget widget-area" role="complementary">
+ 					<?php dynamic_sidebar( 'header-widget-area' ); ?>
+ 				</div>
+ 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<div class="site-topbar">

@@ -119,6 +119,21 @@ function boston_widgets_init() {
 }
 add_action( 'widgets_init', 'boston_widgets_init' );
 
+function header_widgets_init() {
+ 
+ register_sidebar( array(
+
+ 'name' => 'Widget header',
+ 'id' => 'header-widget-area',
+ 'before_widget' => '<div class="social-icons-widget">',
+ 'after_widget' => '</div>',
+ 'before_title' => '<h2 class="hwa-title">',
+ 'after_title' => '</h2>',
+ ) );
+}
+
+add_action( 'widgets_init', 'header_widgets_init' );
+
 /**
  * Enqueue scripts and styles.
  */
