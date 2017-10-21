@@ -47,8 +47,23 @@
 				<?php do_action('boston_after_site_description'); ?>
 			</div>
 			 <?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
- 				<div id="header-widget-area" class="social-icons-widget widget-area" role="complementary">
- 					<?php dynamic_sidebar( 'header-widget-area' ); ?>
+			 	<div>
+				 	<script type="text/javascript">
+						/* Voici la fonction javascript qui change la propriété "display"
+						pour afficher ou non le div selon que ce soit "none" ou "block". */
+						 
+						function AfficherMasquer()
+						{
+							divInfo = document.getElementById('header-widget-area');
+							if (divInfo.style.display == 'none')
+								divInfo.style.display = 'inline-block';
+							else
+								divInfo.style.display = 'none';
+						}
+					</script>
+	 				<div id="header-widget-area" class="hwa-widget widget-area">
+	 					<?php dynamic_sidebar( 'header-widget-area' ); ?>
+	 				</div>
  				</div>
  			<?php endif; ?>
 		</div><!-- .site-branding -->

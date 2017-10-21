@@ -125,7 +125,7 @@ function header_widgets_init() {
 
  'name' => 'Widget header',
  'id' => 'header-widget-area',
- 'before_widget' => '<div class="social-icons-widget">',
+ 'before_widget' => '<div class="hwa-widget">',
  'after_widget' => '</div>',
  'before_title' => '<h2 class="hwa-title">',
  'after_title' => '</h2>',
