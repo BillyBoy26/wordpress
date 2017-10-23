@@ -150,7 +150,7 @@
 ( function() {
 
 	window.addEventListener("scroll", function(){
-		if(document.body.scrollTop > 350 || document.documentElement.scrollTop > 350){
+		if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
 			document.getElementById("site-topbar").classList.add('site-topbar-fixed');
 		}else{
 			document.getElementById("site-topbar").classList.remove('site-topbar-fixed');
