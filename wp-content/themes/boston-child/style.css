@@ -792,21 +792,22 @@ textarea {
 	float: left;
 }
 
-.site-topbar .topbar-search {
+
+.topbar-search {
 	line-height: 52px;
-	border-right: 1px solid #F1F1F1;
 	padding-right: 10px;
-	position: absolute;
 	right: 40px;
+	float:right;
+	display: inline;
 }
 
-@media (max-width: 991px) {
-	.site-topbar .topbar-search {
-		right: 20px;
+@media (max-width: 300px) {
+	.topbar-search {
+		display: none;
 	}
 }
 
-.site-topbar .topbar-search input {
+.topbar-search input {
 	margin: 0px;
 	border: none;
 	font-size: 11px;
@@ -814,17 +815,15 @@ textarea {
 	padding: 0;
 }
 
-.site-topbar .topbar-search .genericon {
+.topbar-search .genericon {
 	line-height: 52px;
 	font-size: 21px;
 }
 
 /* Site Branding */
 .site-branding {
-	padding: 50px 0px;
 	padding:  3.125rem 0rem;
 	text-align: center;
-	position: relative;
 	z-index: 1;
 }
 
@@ -1997,7 +1996,7 @@ object {
 .owl-theme .owl-controls.clickable .owl-page:hover span {
 	filter: Alpha(Opacity=100);
 	/*IE7 fix*/
-	opacity: 1;
+	opacity:1;
 }
 
 /* If PaginationNumbers is true */
@@ -2017,3 +2016,10 @@ object {
 	min-height: 150px;
 	background: url(AjaxLoader.gif) no-repeat center center;
 }
+
+.hwa-widget {
+	float: left;
+	margin-left:20px;
+	margin-top:15px;
+}
+

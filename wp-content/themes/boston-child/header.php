@@ -25,6 +25,19 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boston' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="top-zone">
+			<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+				<?php dynamic_sidebar( 'header-widget-area' ); ?>
+			<?php endif; ?>
+			<div class="topbar-search">
+				<?php do_action('boston_top_searchform'); ?>
+				<form action="/" method="get">
+				    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
+					<span class="genericon genericon-search"></span>
+					<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+				</form>
+			</div>
+		</div>
 		<div class="site-branding">
 			<div class="container">
 				<?php
@@ -46,26 +59,6 @@
 				endif; ?>
 				<?php do_action('boston_after_site_description'); ?>
 			</div>
-			 <?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
-			 	<div>
-				 	<script type="text/javascript">
-						/* Voici la fonction javascript qui change la propriété "display"
-						pour afficher ou non le div selon que ce soit "none" ou "block". */
-						 
-						function AfficherMasquer()
-						{
-							divInfo = document.getElementById('header-widget-area');
-							if (divInfo.style.display == 'none')
-								divInfo.style.display = 'inline-block';
-							else
-								divInfo.style.display = 'none';
-						}
-					</script>
-	 				<div id="header-widget-area" class="hwa-widget widget-area">
-	 					<?php dynamic_sidebar( 'header-widget-area' ); ?>
-	 				</div>
- 				</div>
- 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<div class="site-topbar">
@@ -75,14 +68,6 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php do_action('boston_before_top_searchform'); ?>
-				<div class="topbar-search">
-					<?php do_action('boston_top_searchform'); ?>
-					<form action="/" method="get">
-					    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-						<span class="genericon genericon-search"></span>
-						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-					</form>
-				</div>
 			</div>
 		</div>
 
