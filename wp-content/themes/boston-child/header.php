@@ -61,7 +61,7 @@
 			</div>
 		</div><!-- .site-branding -->
 
-		<div class="site-topbar">
+		<div class="site-topbar" id="site-topbar">
 			<div class="container">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'boston' ); ?></button>

@@ -145,6 +145,20 @@
 	}( container ) );
 } )();
 
+/*=====================================================================================*/
+
+( function() {
+
+	window.addEventListener("scroll", function(){
+		if(document.body.scrollTop > 350 || document.documentElement.scrollTop > 350){
+			document.getElementById("site-topbar").classList.add('site-topbar-fixed');
+		}else{
+			document.getElementById("site-topbar").classList.remove('site-topbar-fixed');
+		}
+	});
+})();
+
+
 // Call owl carousel for featured content.
 jQuery( document ).ready( function(){
 	jQuery('.featured_posts').owlCarousel( {

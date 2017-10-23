@@ -792,6 +792,19 @@ textarea {
 	float: left;
 }
 
+.site-topbar .container {
+	border-top: 1px solid #EEEEEE;
+	/*border-bottom: 1px solid #EEEEEE;*/
+}
+
+.site-topbar-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+
 
 .topbar-search {
 	line-height: 52px;
@@ -1030,6 +1043,7 @@ textarea {
 		color: #000000;
 		font-size: 11px;
 		font-size: 0.6875rem;
+		font-weight: bold;
 		text-transform: uppercase;
 		letter-spacing: 1.2px;
 		line-height: 52px;
