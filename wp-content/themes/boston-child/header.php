@@ -25,17 +25,20 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boston' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="top-zone">
-			<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
-				<?php dynamic_sidebar( 'header-widget-area' ); ?>
-			<?php endif; ?>
-			<div class="topbar-search">
-				<?php do_action('boston_top_searchform'); ?>
-				<form action="/" method="get">
-				    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-					<span class="genericon genericon-search"></span>
-					<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-				</form>
+		<div class="top-zone-header container">
+			<button class="menu-toggle" id="menu-button" aria-label="menu" aria-controls="layout-drawer" aria-expanded="false"></button>
+			<div class="top-zone">
+				<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+					<?php dynamic_sidebar( 'header-widget-area' ); ?>
+				<?php endif; ?>
+				<div class="topbar-search">
+					<?php do_action('boston_top_searchform'); ?>
+					<form action="/" method="get">
+					    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
+						<span class="genericon genericon-search"></span>
+						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="site-branding">
@@ -64,7 +67,6 @@
 		<div class="site-topbar" id="site-topbar">
 			<div class="container">
 				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'boston' ); ?></button>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php do_action('boston_before_top_searchform'); ?>
@@ -72,6 +74,15 @@
 		</div>
 
 	</header><!-- #masthead -->
+
+	<div id="layout-drawer" area-expanded="false">
+		<div id="close-sidebar">
+			<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>
+		</div>
+		<div>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</div>
+	</div>
 
 	<?php if ( is_archive() ) { ?>
 		<header class="page-header archive-header">

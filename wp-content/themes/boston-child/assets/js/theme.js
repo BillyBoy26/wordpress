@@ -41,13 +41,18 @@
 ( function() {
 	var container, button, menu, links, subMenus, i, len;
 
+	body = document.getElementsByTagName('body')[0];
+	if (!body) {
+		return;
+	}
+
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
+	button = document.getElementById( 'menu-button' );
+	if ( ! button) {
 		return;
 	}
 
@@ -64,17 +69,39 @@
 		menu.className += ' nav-menu';
 	}
 
+	drawer = document.getElementById('layout-drawer');
+	if( !drawer) {
+		return;
+	}
+
+	obfuscator = document.getElementById('obfuscator');
+	if( !obfuscator){
+		return;
+	}
+
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
+		if (drawer.classList.contains('toggled') ) {
+			hideDrawer(drawer,obfuscator,button,menu,body);
 		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
+			showDrawer(drawer,obfuscator,button,menu,body);
 		}
 	};
+
+	obfuscator.onclick = function(){
+		hideDrawer(drawer,obfuscator,button,menu,body);
+	}
+
+	closeDrawerButton = document.getElementById("close-sidebar");
+	closeDrawerButton.onclick = function() {
+		hideDrawer(drawer,obfuscator,button,menu,body);
+	};
+
+	window.addEventListener('resize',function(event) {
+		clientWidth = event.target.outerWidth;
+		if (clientWidth > 991){
+			hideDrawer(drawer,obfuscator,button,menu,body);
+		}
+	});
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );
@@ -89,6 +116,25 @@
 	for ( i = 0, len = links.length; i < len; i++ ) {
 		links[i].addEventListener( 'focus', toggleFocus, true );
 		links[i].addEventListener( 'blur', toggleFocus, true );
+	}
+
+	function showDrawer(drawer,obfuscator,button,menu,body) {
+		drawer.classList.add('toggled');
+		obfuscator.classList.add('isVisible');
+		body.classList.add('blocked');
+		button.setAttribute( 'aria-expanded', 'true' );
+		menu.setAttribute( 'aria-expanded', 'true' );
+
+	}
+
+	function hideDrawer(drawer,obfuscator,button,menu,body) {
+		if(drawer.classList.contains('toggled')){
+			drawer.classList.remove('toggled');
+			obfuscator.classList.remove('isVisible');
+			body.classList.remove('blocked');
+			button.setAttribute( 'aria-expanded', 'false' );
+			menu.setAttribute( 'aria-expanded', 'false' );
+		}
 	}
 
 	/**
@@ -147,6 +193,9 @@
 
 /*=====================================================================================*/
 
+/*
+	fixed top bar when scrolling  down
+*/
 ( function() {
 
 	window.addEventListener("scroll", function(){

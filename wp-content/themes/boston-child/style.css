@@ -815,6 +815,27 @@ textarea {
 	display: inline;
 }
 
+#layout-drawer {
+	display: block;
+	flex-wrap: nowrap;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 240px;
+	z-index: 10;
+	background-color: #FFFFFF; 
+	transition: all 0.45s cubic-bezier(0.25,0.35,0.5,1);
+	transform: translateX(-250px);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+				0 3px 1px -2px rgba(0,0,0,.2), 
+				0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+#layout-drawer.toggled {
+	transform: translateX(0);
+}
+
 @media (max-width: 300px) {
 	.topbar-search {
 		display: none;
@@ -1100,6 +1121,13 @@ textarea {
 		border-bottom: 1px solid #f1f1f1;
 		font-size: 13px;
 	}
+
+	.top-zone {
+		display: none;
+	}
+	.site-topbar {
+		display: none;
+	}
 }
 
 /* Small menu. */
@@ -1143,6 +1171,12 @@ textarea {
 @media (min-width: 992px) {
 	.menu-toggle {
 		display: none;
+	}
+	.site-topbar {
+		display: block;
+	}
+	.top-zone {
+		display: block;
 	}
 	.main-navigation ul {
 		display: block;
@@ -2034,7 +2068,36 @@ object {
 
 .hwa-widget {
 	float: left;
-	margin-left:20px;
 	margin-top:15px;
+}
+
+
+/* Partie grise quand on déplie le menu en mobile*/
+
+#obfuscator {
+	position:absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	transition: opacity 0.2s cubic-bezier(0.4,0.2,1);
+
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	pointer-events: none;
+	visibility: visible;
+
+	overflow: hidden;
+
+}
+
+#obfuscator.isVisible {
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.blocked {
+	overflow: hidden;
 }
 

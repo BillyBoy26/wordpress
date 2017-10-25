@@ -32,6 +32,7 @@
 	<?php do_action('boston_after_footer'); ?>
 
 </div><!-- #page -->
+<div id="obfuscator"></div>
 
 <?php wp_footer(); ?>
 
