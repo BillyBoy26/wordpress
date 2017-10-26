@@ -85,6 +85,10 @@
 		<div class="menu-drawer">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
+		<div class="footer-drawer">
+			<p><?php printf( esc_html__( ' %2$s &copy; %1$s', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
+			<p><?php printf( esc_html__( ' All Rights Reserved.', 'boston' )); ?></p>
+		</div>
 	</div>
 
 	<?php if ( is_archive() ) { ?>
