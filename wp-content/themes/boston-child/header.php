@@ -77,8 +77,8 @@
 
 	<div id="layout-drawer" area-expanded="false">
 		<div id="close-drawer">
-			<button area-label="<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>" >
-				<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>
+			<button area-label="<?php esc_html_e( 'Fermer le menu', 'boston' ); ?>" >
+				<?php esc_html_e( 'Fermer le menu', 'boston' ); ?>
 			</button>
 			<div>
 				<?php get_template_part('assets/images/inline', 'closedrawer.svg'); ?>
@@ -100,7 +100,7 @@
 			</div>
 			<div class="footer-drawer">
 				<p><?php printf( esc_html__( ' %2$s &copy; %1$s', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
-				<p><?php printf( esc_html__( ' All Rights Reserved.', 'boston' )); ?></p>
+				<p><?php esc_html_e( 'Tous droits réservés.', 'boston' ); ?></p>
 			</div>
 			
 		</div>

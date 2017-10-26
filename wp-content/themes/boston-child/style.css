@@ -1267,6 +1267,7 @@ textarea {
 	text-transform: none;
 	letter-spacing: normal;
 	font-size: 13px;
+    padding-left: 15px;
 }
 
 #close-drawer div {
