@@ -76,10 +76,13 @@
 	</header><!-- #masthead -->
 
 	<div id="layout-drawer" area-expanded="false">
-		<div id="close-sidebar">
+		<button area-label="<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>" id="close-drawer">
 			<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>
+		</button>
+		<div class="title-drawer-layout">
+			<h1 id="title-drawer"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div>
-		<div>
+		<div class="menu-drawer">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
 	</div>

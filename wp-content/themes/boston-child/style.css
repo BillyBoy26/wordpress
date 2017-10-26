@@ -1244,6 +1244,69 @@ textarea {
 	right: 0;
 }
 
+
+#close-drawer {
+	border-bottom: 1px solid #eee;
+	width: 100%;
+	background-color: #FFFFFF;
+	color: #000000;
+	height: 50px;
+}
+
+.title-drawer-layout {
+	border-bottom: 1px solid #eee;
+	padding: 10px;
+	text-align: center;
+	display: flex;
+	height: 70px;
+}
+
+#title-drawer {
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: auto;
+}
+
+.menu-drawer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+
+	flex-direction: column;
+}
+
+.menu-drawer ul li {
+	height: 50px;
+}
+
+.menu-drawer a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	font-weight: bold;
+}
+
+.menu-drawer .current-menu-item a{
+	color: #d65456;
+}
+
+.menu-drawer a:hover {
+	background-color: #e0e0e0;
+	text-decoration: none;
+}	
+
+.menu-drawer a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	font-weight: bold;
+}
+
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/

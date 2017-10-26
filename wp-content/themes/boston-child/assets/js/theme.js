@@ -91,7 +91,7 @@
 		hideDrawer(drawer,obfuscator,button,menu,body);
 	}
 
-	closeDrawerButton = document.getElementById("close-sidebar");
+	closeDrawerButton = document.getElementById("close-drawer");
 	closeDrawerButton.onclick = function() {
 		hideDrawer(drawer,obfuscator,button,menu,body);
 	};
