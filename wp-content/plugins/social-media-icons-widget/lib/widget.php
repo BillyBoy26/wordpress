@@ -28,30 +28,17 @@ $ul_class .= 'icons-'.$siw_icons;
 
 <div class="social-icons-widget">
 
-	<script type="text/javascript">
-		function AfficherMasquer()
-		{
-			divInfo = document.getElementById('social-icons');
-			if (divInfo.style.visibility == 'hidden'){
-				divInfo.style.visibility = 'visible';
-			  	divInfo.style.opacity='1';
-			}
-			else{
-				divInfo.style.visibility = 'hidden';
-				divInfo.style.opacity='0';
-			}
-		}
-	</script>
 
 	<?php 
 		if($siw_icons == 'large') { $imgsize = 'height:64px; width:64px;'; }
 		elseif($siw_icons == 'medium') { $imgsize = 'height:32px; width:32px;'; }
 		elseif($siw_icons == 'small') { $imgsize = 'height:16px; width:16px;'; }
 		$shareIcon =plugins_url().'/social-media-icons-widget/icons/vectoriel/share.svg';
- 		echo '<input class="social-share-button" type="image" onClick="AfficherMasquer()" style="'.$imgsize.'" src="'.$shareIcon.'" />'; 
+		wp_enqueue_script('plugin', plugin_dir_url(__FILE__) . '../js/plugin.js');
+ 		echo '<input class="social-share-button" type="image" onClick="afficherMasquer()" style="'.$imgsize.'" src="'.$shareIcon.'" />'; 
 	?>
 
-	<?php echo apply_filters('social_icon_opening_tag', '<ul class="'.$ul_class.'" id="social-icons" style="visibility:hidden">'); ?>
+	<?php echo apply_filters('social_icon_opening_tag', '<ul class="'.$ul_class.'" id="social-icons">'); ?>
 
 	<?php foreach($siw_social_accounts as $siw_title => $id) : ?>
 		<?php if($instance[$id] != '' && $instance[$id] != 'http://') :

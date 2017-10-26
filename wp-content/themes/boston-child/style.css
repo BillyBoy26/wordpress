@@ -815,27 +815,6 @@ textarea {
 	display: inline;
 }
 
-#layout-drawer {
-	display: block;
-	flex-wrap: nowrap;
-	position: absolute;
-	left: 0;
-	top: 0;
-	height: 100%;
-	width: 240px;
-	z-index: 10;
-	background-color: #FFFFFF; 
-	transition: all 0.45s cubic-bezier(0.25,0.35,0.5,1);
-	transform: translateX(-250px);
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
-				0 3px 1px -2px rgba(0,0,0,.2), 
-				0 1px 5px 0 rgba(0,0,0,.12)
-}
-
-#layout-drawer.toggled {
-	transform: translateX(0);
-}
-
 @media (max-width: 300px) {
 	.topbar-search {
 		display: none;
@@ -1246,6 +1225,32 @@ textarea {
 	right: 0;
 }
 
+/**
+* Drawer
+*/
+
+#layout-drawer {
+	display: block;
+	flex-wrap: nowrap;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 240px;
+	z-index: 10;
+	background-color: #FFFFFF; 
+	transition: all 0.45s cubic-bezier(0.25,0.35,0.5,1);
+	transform: translateX(-250px);
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+				0 3px 1px -2px rgba(0,0,0,.2), 
+				0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+#layout-drawer.toggled {
+	transform: translateX(0);
+}
+
+
 
 #close-drawer {
 	border-bottom: 1px solid #eee;
@@ -1268,10 +1273,6 @@ textarea {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: auto;
-}
-
-.menu-drawer {
-	border-bottom: 1px solid #eee;
 }
 
 .menu-drawer ul {
@@ -1304,13 +1305,24 @@ textarea {
 	text-decoration: none;
 }	
 
-.footer-drawer {
+.social-drawer {
+	text-align: center;
+}
+
+.bottom-drawer {
 	position: absolute;
 	bottom: 0;
 	border-top: 1px solid #eee;
-	padding: 20px;
 	width: 100%;
 	text-align: center;
+}
+
+.bottom-drawer > div {
+	padding: 20px;
+}
+
+.footer-drawer {
+	border-top: 1px solid #eee;
 }
 
 .footer-drawer p{
@@ -2143,6 +2155,11 @@ object {
 .hwa-widget {
 	float: left;
 	margin-top:15px;
+}
+
+.straight .hwa-widget {
+	float: none;
+	margin: 0;
 }
 
 

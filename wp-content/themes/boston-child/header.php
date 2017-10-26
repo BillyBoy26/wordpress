@@ -85,9 +85,18 @@
 		<div class="menu-drawer">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
-		<div class="footer-drawer">
-			<p><?php printf( esc_html__( ' %2$s &copy; %1$s', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
-			<p><?php printf( esc_html__( ' All Rights Reserved.', 'boston' )); ?></p>
+		
+		<div class="bottom-drawer">
+			<div class="social-drawer isSocialVisible straight">
+				<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+						<?php dynamic_sidebar( 'header-widget-area' ); ?>
+				<?php endif; ?>
+			</div>
+			<div class="footer-drawer">
+				<p><?php printf( esc_html__( ' %2$s &copy; %1$s', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?></p>
+				<p><?php printf( esc_html__( ' All Rights Reserved.', 'boston' )); ?></p>
+			</div>
+			
 		</div>
 	</div>
 
