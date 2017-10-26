@@ -76,9 +76,15 @@
 	</header><!-- #masthead -->
 
 	<div id="layout-drawer" area-expanded="false">
-		<button area-label="<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>" id="close-drawer">
-			<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>
-		</button>
+		<div id="close-drawer">
+			<button area-label="<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>" >
+				<?php esc_html_e( 'Close Sidebar', 'boston' ); ?>
+			</button>
+			<div>
+				<?php get_template_part('assets/images/inline', 'closedrawer.svg'); ?>
+			</div>
+			
+		</div>
 		<div class="title-drawer-layout">
 			<h1 id="title-drawer"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div>
