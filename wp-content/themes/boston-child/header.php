@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'boston' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="top-zone-header container">
+		<div class="container" id="top-zone-header">
 			<button class="menu-toggle" id="menu-button" aria-label="menu" aria-controls="layout-drawer" aria-expanded="false"></button>
 			<div class="top-zone">
 				<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
