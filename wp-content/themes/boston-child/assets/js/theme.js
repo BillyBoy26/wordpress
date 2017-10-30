@@ -199,17 +199,19 @@
 ( function() {
 	var searchIconFixed = document.getElementById("topbar-search-icon-fixed");
 	var containerFixed = document.getElementById("topbar-search-fixed");
+	var txtSearchFixed = document.getElementById("search-fixed");
 
-	addSearchClickHandler(searchIconFixed,containerFixed);
+	addSearchClickHandler(searchIconFixed,containerFixed,txtSearchFixed);
 
 
 	var searchIcon = document.getElementById("topbar-search-icon");
 	var container = document.getElementById("topbar-search");
+	var txtSearch = document.getElementById("search");
 
-	addSearchClickHandler(searchIcon,container);
+	addSearchClickHandler(searchIcon,container,txtSearch);
 
 
-	function addSearchClickHandler(searchIcon,container) {
+	function addSearchClickHandler(searchIcon,container,txtSearch) {
 		if(!searchIcon){
 			return;
 		}
@@ -217,8 +219,19 @@
 			return;
 		}
 
+		if(!txtSearch){
+			return;
+		}
+
 		searchIcon.onclick = function(event) {
 			container.classList.toggle("open");
+			if(container.classList.contains("open")) {
+				txtSearch.focus();
+			}
+		};
+
+		txtSearch.onblur = function(event) {
+			container.classList.remove("open");
 		};
 	}
 })();

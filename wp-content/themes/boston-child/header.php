@@ -27,19 +27,17 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container" id="top-zone-header">
 			<button class="menu-toggle" id="menu-button" aria-label="menu" aria-controls="layout-drawer" aria-expanded="false"></button>
-			<div class="top-zone">
-				<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
-					<?php dynamic_sidebar( 'header-widget-area' ); ?>
-				<?php endif; ?>
-				<div id="topbar-search" class="topbar-search">
-					<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
-					    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-					</form>
-					<div id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
-							<?php get_template_part('assets/images/icons/inline', 'search.svg'); ?>
-					</div>	
-				</div>
+			<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+				<?php dynamic_sidebar( 'header-widget-area' ); ?>
+			<?php endif; ?>
+			<div id="topbar-search" class="topbar-search">
+				<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
+				    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
+					<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+				</form>
+				<div id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
+						<?php get_template_part('assets/images/icons/inline', 'search.svg'); ?>
+				</div>	
 			</div>
 		</div>
 		<div class="site-branding">
