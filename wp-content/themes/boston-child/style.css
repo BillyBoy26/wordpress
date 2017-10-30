@@ -806,6 +806,10 @@ textarea {
 	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.site-topbar-fixed #topbar-search-fixed {
+	display: flex;
+}
+
 
 .topbar-search {
 	padding-right: 10px;
@@ -829,7 +833,7 @@ textarea {
 	padding:6px 20px;
 }
 
-#topbar-search-icon {
+.topbar-search-icon {
 	width: 40px;
 	height: 40px;
 	padding: 10px;
@@ -837,7 +841,7 @@ textarea {
 	cursor: pointer;
 }
 
-#topbar-search-form {
+.topbar-search-form {
 	position: absolute;
 	right: 45px;
 	top:9px;
@@ -847,15 +851,41 @@ textarea {
 	overflow: hidden;
 }
 
-.open #topbar-search-form {
+.open .topbar-search-form {
 	width: 300px;
 	border: 1px solid #eee;
 }
 
 
-#topbar-search-icon:hover , .open #topbar-search-icon{
+.topbar-search-icon:hover , .open .topbar-search-icon{
 	background-color: #5ec6ce;
 }
+
+#topbar-search-fixed {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	justify-content: center;
+	height: 99%;
+	padding-left: 10px;
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+}
+
+#topbar-search-fixed form {
+	right: 5px;
+	top: 0;
+}
+
+#topbar-search-fixed input {
+	height: 46px;
+}
+
+#topbar-search-fixed div, #topbar-search-fixed form {
+	align-self: center;
+}
+
 
 .top-zone {
 	margin-top: 15px;

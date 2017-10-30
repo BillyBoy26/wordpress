@@ -194,32 +194,37 @@
 /*=====================================================================================*/
 
 /*
-	fixed top bar when scrolling  down
+	Search icon top-bar
 */
 ( function() {
+	var searchIconFixed = document.getElementById("topbar-search-icon-fixed");
+	var containerFixed = document.getElementById("topbar-search-fixed");
+
+	addSearchClickHandler(searchIconFixed,containerFixed);
+
 
 	var searchIcon = document.getElementById("topbar-search-icon");
-	if(!searchIcon){
-		return;
-	}
-
 	var container = document.getElementById("topbar-search");
-	if(!container){
-		return;
-	}
 
-	searchIcon.onclick = function(event) {
-		if(container.classList.contains("open")){
-			container.classList.remove("open");
-		}else {
-			container.classList.add("open");
+	addSearchClickHandler(searchIcon,container);
+
+
+	function addSearchClickHandler(searchIcon,container) {
+		if(!searchIcon){
+			return;
 		}
-	};
+		if(!container){
+			return;
+		}
 
+		searchIcon.onclick = function(event) {
+			container.classList.toggle("open");
+		};
+	}
 })();
 
 /*
-	Search icon top-bar
+	fixed top bar when scrolling  down
 */
 ( function() {
 
