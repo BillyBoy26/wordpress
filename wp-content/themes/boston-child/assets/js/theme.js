@@ -198,6 +198,31 @@
 */
 ( function() {
 
+	var searchIcon = document.getElementById("topbar-search-icon");
+	if(!searchIcon){
+		return;
+	}
+
+	var container = document.getElementById("topbar-search");
+	if(!container){
+		return;
+	}
+
+	searchIcon.onclick = function(event) {
+		if(container.classList.contains("open")){
+			container.classList.remove("open");
+		}else {
+			container.classList.add("open");
+		}
+	};
+
+})();
+
+/*
+	Search icon top-bar
+*/
+( function() {
+
 	window.addEventListener("scroll", function(){
 		var clientWidth = document.documentElement.clientWidth;
 		if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){

@@ -808,11 +808,9 @@ textarea {
 
 
 .topbar-search {
-	line-height: 52px;
 	padding-right: 10px;
 	right: 40px;
 	float:right;
-	display: inline;
 }
 
 @media (max-width: 300px) {
@@ -825,15 +823,43 @@ textarea {
 	margin: 0px;
 	border: none;
 	font-size: 11px;
-	max-width: 120px;
 	padding: 0;
+	height: 50px;
+	width: 100%;
+	padding:6px 20px;
 }
 
-.topbar-search .genericon {
-	line-height: 52px;
-	font-size: 21px;
+#topbar-search-icon {
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	position: relative;
+	cursor: pointer;
 }
 
+#topbar-search-form {
+	position: absolute;
+	right: 45px;
+	top:9px;
+	width: 0px;
+	border: none;
+	transition: width 0.7s ease;
+	overflow: hidden;
+}
+
+.open #topbar-search-form {
+	width: 300px;
+	border: 1px solid #eee;
+}
+
+
+#topbar-search-icon:hover , .open #topbar-search-icon{
+	background-color: #5ec6ce;
+}
+
+.top-zone {
+	margin-top: 15px;
+}
 
 #top-zone-header {
 	transition: all 0.4s ease;
@@ -2181,7 +2207,6 @@ object {
 
 .hwa-widget {
 	float: left;
-	margin-top:15px;
 }
 
 .straight .hwa-widget {

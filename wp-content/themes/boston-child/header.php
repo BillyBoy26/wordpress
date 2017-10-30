@@ -31,13 +31,15 @@
 				<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
 					<?php dynamic_sidebar( 'header-widget-area' ); ?>
 				<?php endif; ?>
-				<div class="topbar-search">
+				<div id="topbar-search" class="topbar-search">
 					<?php do_action('boston_top_searchform'); ?>
-					<form action="/" method="get">
-					    <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-						<span class="genericon genericon-search"></span>
+					<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form">
+					    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
 						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 					</form>
+					<div id="topbar-search-icon" aria-label="search" aria-expanded="false">
+							<?php get_template_part('assets/images/icons/inline', 'search.svg'); ?>
+					</div>	
 				</div>
 			</div>
 		</div>
@@ -81,7 +83,7 @@
 				<?php esc_html_e( 'Fermer le menu', 'boston' ); ?>
 			</button>
 			<div>
-				<?php get_template_part('assets/images/inline', 'closedrawer.svg'); ?>
+				<?php get_template_part('assets/images/icons/inline', 'closedrawer.svg'); ?>
 			</div>
 			
 		</div>
