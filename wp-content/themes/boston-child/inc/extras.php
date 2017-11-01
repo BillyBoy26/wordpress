@@ -251,3 +251,16 @@ function boston_hide_post_featured_tags( $terms, $post_id = null, $tax = '' ){
 
 }
 add_filter( 'get_the_terms', 'boston_hide_post_featured_tags', 90, 3 );
+
+
+/* Replace some wordpress core translattion*/
+
+function custom_core_translation($translation, $text, $domain) {
+    if ($text == 'Email') {
+        $translation = &get_translations_for_domain($domain);
+        return $translation -> translate('E-mail');
+    }
+    return $translation;
+}
+
+add_filter('gettext', 'custom_core_translation', 10, 3);
