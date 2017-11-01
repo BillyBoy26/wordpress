@@ -223,6 +223,7 @@
 			return;
 		}
 
+	
 		searchIcon.onclick = function(event) {
 			container.classList.toggle("open");
 			if(container.classList.contains("open")) {
@@ -231,7 +232,18 @@
 		};
 
 		txtSearch.onblur = function(event) {
-			container.classList.remove("open");
+			/*
+				https://stackoverflow.com/questions/121499/when-a-blur-event-occurs-how-can-i-find-out-which-element-focus-went-to
+
+			*/
+			setTimeout(function(){
+				var isSearchClicked = document.activeElement === searchIcon;
+				if(!isSearchClicked) {
+					container.classList.remove("open");
+				}
+			},100);
+			
+			
 		};
 	}
 })();
