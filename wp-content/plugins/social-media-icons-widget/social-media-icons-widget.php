@@ -24,38 +24,13 @@ class Social_Icons_Widget extends WP_Widget {
 		);
 
 		// Register Stylesheets
-		add_action('admin_print_styles', array($this, 'register_admin_styles'));
-		add_action('wp_enqueue_scripts', array($this, 'register_widget_styles'), 5);
-
-		include('lib/social-networks.php');
+		add_action('wp_enqueue_scripts', array($this, 'register_widget_styles'));
 	}
 
-	function form($instance) {
-		include('lib/form.php');
-	}
 
-	function update($new_instance, $old_instance) {
-		global $siw_social_accounts;
-		$instance = array();
-
-		foreach ($siw_social_accounts as $site => $id) {
-			$instance[$id] = $new_instance[$id];
-		}
-
-		$instance['title'] = $new_instance['title'];
-		$instance['icons'] = $new_instance['icons'];
-		$instance['labels'] = $new_instance['labels'];
-		$instance['show_title'] = $new_instance['show_title'];
-
-		return $instance;
-	}
 
 	function widget($args, $instance) {
 		include('lib/widget.php');
-	}
-
-	function register_admin_styles() {
-		wp_enqueue_style('social-icons-widget-admin', plugins_url('social-media-icons-widget/css/social_icons_admin.css'));
 	}
 
 	function register_widget_styles() {

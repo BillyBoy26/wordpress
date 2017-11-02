@@ -842,6 +842,8 @@ textarea {
 	position: relative;
 	cursor: pointer;
 	align-self: center;
+	text-align: center;
+    display: table;
 }
 
 .topbar-search-form {
@@ -861,7 +863,7 @@ textarea {
 
 
 .topbar-search-icon:hover , .open .topbar-search-icon{
-	background-color: #5ec6ce;
+	background-color: #D65456;
 }
 
 #topbar-search-fixed {
@@ -1164,9 +1166,10 @@ textarea {
 		font-size: 13px;
 	}
 
-	#top-zone-header .hwa-widget {
+	#top-zone-header .hwa-container {
 		display: none;
 	}
+
 	.site-topbar {
 		display: none;
 	}
@@ -2241,9 +2244,11 @@ object {
 	background: url(AjaxLoader.gif) no-repeat center center;
 }
 
-.hwa-widget {
-	float: left;
-	margin-top: 25px;
+.hwa-container {
+	position: absolute;
+    height: 100%;
+    padding:10px;
+   	top: 6px;
 }
 
 .straight .hwa-widget {

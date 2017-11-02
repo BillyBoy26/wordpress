@@ -1,10 +1,11 @@
 
-function afficherMasquer(){
-	/*TODO parentElements*/
-	divInfo = document.getElementsByClassName('social-icons-widget')[0].parentElement;
-	if(divInfo.classList.contains('isSocialVisible')){
-		divInfo.classList.remove('isSocialVisible');
-	} else {
-		divInfo.classList.add('isSocialVisible');
-	}
-}
+(function() {
+	var shareButton = document.getElementById("share-button");
+
+	container = document.getElementsByClassName('social-icons-widget')[0].parentElement;
+
+	shareButton.onclick = function(event) {
+		container.classList.toggle('isSocialVisible');
+	};
+})();
+
