@@ -7,7 +7,7 @@ input:focus {
 }
 
 .social-icons-widget{
-	display: flex;
+	display: inline-flex;
 }
 
 .social-icons-widget ul {

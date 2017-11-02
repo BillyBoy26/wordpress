@@ -1425,7 +1425,7 @@ textarea {
 }
 
 .bottom-drawer > div {
-	padding: 20px;
+	padding: 5px;
 }
 
 .footer-drawer {
@@ -2267,7 +2267,6 @@ object {
 }
 
 .straight .hwa-widget {
-	float: none;
 	margin: 0;
 }
 
