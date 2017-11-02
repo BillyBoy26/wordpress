@@ -35,7 +35,6 @@
 			<div id="topbar-search" class="topbar-search">
 				<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
 				    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
-					<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 				</form>
 				<div id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
 						<i class="fa fa-search" aria-hidden="true"></i>
@@ -71,7 +70,11 @@
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 				</nav><!-- #site-navigation -->
 				<?php do_action('boston_before_top_searchform'); ?>
-
+				<div id="hwa-container-fixed" class="isSocialVisible straight">
+					<?php if ( is_active_sidebar( 'header-widget-area' ) ) : ?>
+						<?php dynamic_sidebar( 'header-widget-area' ); ?>
+					<?php endif; ?>
+				</div>
 				<div id="topbar-search-fixed" class="topbar-search">
 					<?php do_action('boston_top_searchform'); ?>
 					<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form-fixed" class="topbar-search-form">
@@ -79,7 +82,7 @@
 						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 					</form>
 					<div id="topbar-search-icon-fixed" class="topbar-search-icon" aria-label="search" aria-expanded="false">
-							<?php get_template_part('assets/images/icons/inline', 'search.svg'); ?>
+						<i class="fa fa-search" aria-hidden="true"></i>
 					</div>	
 				</div>	
 			</div>

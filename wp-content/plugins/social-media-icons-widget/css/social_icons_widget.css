@@ -48,6 +48,10 @@ input:focus {
 	display: none;
 }
 
+.straight .social-button-container{
+	display: none;
+}
+
 .social-button-container{
 	width: 40px;
 	height: 40px;
@@ -57,12 +61,6 @@ input:focus {
 	color:black;
 	border-radius: 0px;
 	outline:none;
-}
-
-@media (max-width: 992px) {
-	.social-button-container {
-		display: none;
-	}
 }
 
 .social-button-container:hover{

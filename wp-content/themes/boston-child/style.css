@@ -810,6 +810,10 @@ textarea {
 	display: flex;
 }
 
+.site-topbar-fixed #hwa-container-fixed {
+	display: flex;
+}
+
 
 .topbar-search {
 	position: absolute;
@@ -877,6 +881,17 @@ textarea {
 	padding-right: 10px;
 	border-left: 1px solid #EEEEEE;
 	border-right: 1px solid #EEEEEE;
+}
+
+#hwa-container-fixed {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right:60px;
+	justify-content: center;
+	height: 99%;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #topbar-search-fixed form {
