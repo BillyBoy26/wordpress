@@ -16,6 +16,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/wordpress/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wordpress/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wordpress/favicon-16x16.png">
+<link rel="manifest" href="/wordpress/manifest.json">
+<link rel="mask-icon" href="/wordpress/safari-pinned-tab.svg" color="#d65456">
+<meta name="theme-color" content="#ffffff">
+
 <script src="https://use.fontawesome.com/2ce0a6674a.js"></script>
 <?php wp_head(); ?>
 </head>
