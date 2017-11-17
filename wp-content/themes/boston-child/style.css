@@ -2300,3 +2300,35 @@ object {
 	overflow: hidden;
 }
 
+
+
+/*NewsLetter*/
+.es_textbox_button {
+    width: 100%;
+}
+
+.es_button .es_textbox_button{
+    background-color: white;
+    color:#777777;
+    border: 1px solid #f1f1f1;
+}
+
+.es_button .es_textbox_button:hover {
+    background-color: #D65456;
+    color:white;
+}
+
+
+/*Bouton laisser un commentaire*/
+.form-submit .submit{
+    background-color: white;
+    color:#777777;
+    border: 1px solid #f1f1f1;
+}
+
+
+.form-submit .submit:hover {
+    background-color: #D65456;
+    color:white;
+}
+
