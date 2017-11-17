@@ -155,6 +155,7 @@ function boston_scripts() {
     }
 
     wp_enqueue_style( 'wpp-custom-style', get_template_directory_uri() . '/assets/css/plugins/wpp.css', array() );
+    wp_enqueue_style('newsletter-custom-style', get_template_directory_uri() . '/assets/css/plugins/newsletter.css', array('newsletter-subscription'));
 
 }
 add_action( 'wp_enqueue_scripts', 'boston_scripts' );

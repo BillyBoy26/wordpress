@@ -1,0 +1,11 @@
+/*NewsLetter*/
+.tnp input.tnp-submit {
+  background-color: white;
+      color:#777777;
+    border: 1px solid #f1f1f1;
+}
+
+.tnp input.tnp-submit:hover {
+    background-color: #D65456;
+    color:white;
+}
