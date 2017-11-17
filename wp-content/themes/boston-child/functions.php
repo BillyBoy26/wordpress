@@ -154,6 +154,8 @@ function boston_scripts() {
         wp_add_inline_style( 'boston-style', boston_get_custom_style() );
     }
 
+    wp_enqueue_style( 'wpp-custom-style', get_template_directory_uri() . '/assets/css/plugins/wpp.css', array() );
+
 }
 add_action( 'wp_enqueue_scripts', 'boston_scripts' );
 
@@ -187,6 +189,16 @@ function boston_fonts_url() {
 	return $fonts_url;
 }
 endif;
+
+
+
+/* Wordpress popular blog hook TODO move into a plugin */
+function custom_single_popular_post ($post_html, $p, $instance) {
+	return str_replace("posted on ","",$post_html);
+}
+
+add_filter( 'wpp_post', 'custom_single_popular_post',10,3);
+
 
 /**
  * Custom template tags for this theme.

@@ -1,0 +1,104 @@
+/*
+Wordpress Popular Posts plugin stylesheet
+Developed by Hector Cabrera
+cabrerahector.com | @cabrerahector
+
+Use the following classes to style your popular posts list as you like.
+*/
+
+/* Styles the "Sorry, no data so far" message */
+.wpp-no-data {
+}
+
+/* UL - Popular Posts container styles */
+.wpp-list {	
+	display: grid;
+	grid-template-columns: 47% 47%;
+	justify-content: center;
+	grid-gap: 16px;
+	font-family: "Playfair Display", "Open Sans", Georgia, serif;
+}
+	.wpp-list li:first-child {
+		grid-column: 1/3;
+	}
+
+	.wpp-list li:first-child a{
+		display: block;
+		font-size: 18px;
+	}
+
+	.wpp-list li:first-child img{
+		width: 100%;
+	}
+
+	/* LI - Post container styles */
+	.wpp-list li {
+		overflow: hidden;
+		float: none;
+		clear: both;
+		border: none !important;
+	}
+	.wpp-list li a:first-child{
+		transition: opacity 0.3s;
+	}
+	.wpp-list li a:first-child:hover{
+		opacity: 0.8;
+		/* Bug on chrome, the image is move 1px to the right on hover*/
+		-webkit-backface-visibility: hidden;
+	}
+	
+	/* Styles for the popular post in view */
+	.wpp-list li.current {
+	}
+	
+		/* Thumbnail styles */
+		.wpp-thumbnail {
+			margin-bottom: 16px;
+		}
+
+		/* Title styles */
+		.wpp-post-title {
+			font-weight: 600;
+		}
+
+		.wpp-post-title:hover {
+		text-decoration: none;
+		color: #d65456;
+	}
+
+		
+		/* Excerpt styles */
+		.wpp-excerpt {
+		}
+		
+		/* Stats tag styles */
+		.wpp-meta, .post-stats {
+			display: block;
+			font-size: 13px;
+			/*font-weight: bold;*/
+			color: #888888;
+		}
+			
+			/* Comments count styles */
+			.wpp-comments {
+			}
+			
+			/* Views count styles */
+			.wpp-views {
+			}
+			
+			/* Author styles */
+			.wpp-author {
+			}
+			
+			/* Post date styles */
+			.wpp-date {
+			}
+			
+			/* Post category styles */
+			.wpp-category {
+			}
+		
+		/* WP-PostRatings styles */
+		.wpp-rating {
+		}

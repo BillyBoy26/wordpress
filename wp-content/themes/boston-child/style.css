@@ -333,7 +333,7 @@ h6 {
 	color: #222222;
 	font-family: "Playfair Display", "Open Sans", Georgia, serif;
 	line-height: 1.2;
-	font-weight: 400;
+	font-weight: 600;
 	margin-top: 0;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
@@ -722,7 +722,7 @@ textarea {
 # Structure
 --------------------------------------------------------------*/
 .container {
-	max-width: 1120px;
+	max-width: 1170px;
 	margin: 0 auto;
 	padding: 0 40px;
 	clear: both;
@@ -749,7 +749,7 @@ textarea {
 
 @media (min-width: 768px) {
 	.content-area {
-		width: 69.23077%;
+		width: 63.4%;
 		float: left;
 		max-width: 720px;
 		margin-bottom: 0px;
@@ -763,7 +763,7 @@ textarea {
 
 @media (min-width: 768px) {
 	.sidebar {
-		width: 25.96154%;
+		width: 31.96154%;
 		float: right;
 	}
 }
