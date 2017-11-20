@@ -19,7 +19,9 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php boston_posted_on(); ?>
+			<?php 
+				boston_posted_on(); 
+			?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -30,11 +32,19 @@
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'boston-list-medium' ); ?></a>
 	</aside>
 	<?php } ?>
-
+	
+	<div>
+		<?php
+			if ( function_exists( 'sharing_display' ) ) {
+				sharing_display( '', true );
+			}
+		?>
+	</div>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+
 
 	<div class="entry-more">
 		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php esc_html_e( 'Continue Reading', 'boston' ); ?></a>

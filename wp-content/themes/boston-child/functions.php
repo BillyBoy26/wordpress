@@ -200,7 +200,12 @@ function custom_single_popular_post ($post_html, $p, $instance) {
 
 add_filter( 'wpp_post', 'custom_single_popular_post',10,3);
 
-
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display', 19 );
+    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );
 /**
  * Custom template tags for this theme.
  */

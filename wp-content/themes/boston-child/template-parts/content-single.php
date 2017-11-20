@@ -34,6 +34,14 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<div>
+		<?php
+			if ( function_exists( 'sharing_display' ) ) {
+				sharing_display( '', true );
+			}
+		?>
+	</div>
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
