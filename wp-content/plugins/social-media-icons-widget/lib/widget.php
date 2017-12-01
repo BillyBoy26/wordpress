@@ -1,15 +1,36 @@
 <?php 
 	extract($args);
-	echo $before_widget; 
-?>
 
-<div class="social-icons-widget">
+	$siw_title = empty($instance['title']) ? "":apply_filters('widget_title', $instance['title']);
+	$siw_always_straight = $instance['always_straight'] ? TRUE : FALSE;
+	$siw_round_icon = $instance['round_icons'] ? TRUE : FALSE;
+
+	echo $before_widget; 
+	if(!empty($siw_title)) {
+		echo $before_title;		
+		echo $siw_title;	
+		echo $after_title;
+	}
+
+	$container_class = "social-icons-widget-container";
+	if($siw_always_straight){
+		$container_class .= " straight isSocialVisible";
+	}
+	if($siw_round_icon){
+		$container_class .= " siw-round";
+	}
+	
+?>
+<div class="<?php echo $container_class;?>" >
 	<?php 
-		wp_enqueue_script('plugin', plugin_dir_url(__FILE__) . '../js/plugin.js');
-		echo '<button id="share-button" class="social-button-container" type="button"">';
- 		echo 	'<i class="fa fa-share-alt social-share-button "/></i>'; 
- 		echo '</button>'
-	?>
+		if(!$siw_always_straight) {
+			wp_enqueue_script('plugin', plugin_dir_url(__FILE__) . '../js/plugin.js'); ?>
+	
+			<button id="share-button" class="social-button-container" type="button"">
+	 			<i class="fa fa-share-alt social-share-button "/></i>
+	 		</button>
+
+	<?php } //if !$siw_always_straight end ?>
 
 	<ul id="social-icons">
 		<li class="facebook">
@@ -39,6 +60,7 @@
 		</li>
 	</ul>
 </div>
+
 
 
 <?php echo $after_widget; ?>

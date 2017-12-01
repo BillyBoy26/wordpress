@@ -6,25 +6,25 @@ input:focus {
     outline:none;
 }
 
-.social-icons-widget{
+.social-icons-widget-container{
 	display: inline-flex;
 }
 
-.social-icons-widget ul {
+.social-icons-widget-container ul {
 	list-style-type:none;
 	display: flex;
 	margin-bottom: 0px;
 	padding-left: 0px;
 }
 
-.social-icons-widget ul li {
+.social-icons-widget-container ul li {
     width: 40px;
     height: 40px;
     padding: 10px;
     text-align: center;
     display: inline-table;
 }
-.social-icons-widget ul li a {
+.social-icons-widget-container ul li a {
 	display: inline-block;
  	outline:none;
  	transform: translateX(-30px);
@@ -33,12 +33,12 @@ input:focus {
  	visibility: hidden;
 }
 
-.social-icons-widget ul li a img{
+.social-icons-widget-container ul li a img{
  	vertical-align: unset;
 }
 
 
-.isSocialVisible .social-icons-widget ul li a {
+.isSocialVisible ul li a {
  	transform: translateX(0px);
     opacity: 1;
     visibility: visible;
@@ -86,5 +86,63 @@ input:focus {
 .pinterest a:hover{
 	color:#BC071A;
 }
+
+
+/* Round style*/
+
+.siw-round {
+	width: 100%;
+}
+
+.siw-round a{
+	background-color: #5a5a5a;
+	color: #FFFFFF;
+	border-radius: 100%;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 42px;
+}
+
+.siw-round ul {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+.siw-round li {
+	border: none !important;
+	display: inline-block;
+}
+
+.siw-round i{
+	font-size: 16px;
+}
+
+.siw-round .facebook a:hover{
+	color: #FFFFFF;
+	background-color:#3b5998;
+}
+
+.siw-round .googleplus a:hover{
+	color: #FFFFFF;
+	background-color:#DD5044;
+}
+
+.siw-round .instagram a:hover{
+	color: #FFFFFF;
+	background-color:#C10261;
+}
+
+.siw-round .twitter a:hover{
+	color: #FFFFFF;
+	background-color:#4db2ec;
+}
+
+.siw-round .pinterest a:hover{
+	color: #FFFFFF;
+	background-color:#BC071A;
+}
+
 
 
