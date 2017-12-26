@@ -421,20 +421,49 @@ strong {
 }
 
 blockquote {
-	clear: both;
-	margin: 0 0 20px 0;
-	margin:  0 0 1.25rem 0;
+	margin: 40px 0;
+	padding: 0.25em 40px;
+	position: relative;
+}
+
+blockquote:before {
+	font-family: Georgia, serif;
+	display: block;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	top: -30px;
+	left: 0px;
+	color: #d65456;
+}
+
+blockquote:after {
+	font-family: Georgia, serif;
+	display: block;
+	content: "\201D";
+	font-size: 80px;
+	position: absolute;
+	top: -30px;
+	right: 0;
+	color: #d65456;
 }
 
 blockquote p {
 	font-style: italic;
+	font-size: 20px;
+	text-align: center;
+	margin:0;
+	color: #757575;
 }
 
 blockquote cite {
+	display: block;
 	font-style: normal;
-	margin-bottom: 20px;
-	margin-bottom: 1.25rem;
-	font-size: 13px;
+	margin-top: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #222222;
 }
 
 dfn,
