@@ -466,6 +466,16 @@ blockquote cite {
 	color: #222222;
 }
 
+.important-bloc {
+	color: #d65456;
+	margin: 50px auto;
+	font-style: italic;
+	font-size: 25px;
+	text-align: center;
+	text-transform: uppercase;
+	max-width: 585px;
+}
+
 dfn,
 cite,
 em,
