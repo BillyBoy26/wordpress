@@ -1641,11 +1641,10 @@ a.entry-category {
 
 .entry-content a, .comment-content a {
 	color: #d65456;
-	text-decoration: underline;
 }
 
 .entry-content a:hover, .comment-content a:hover {
-	color: #222222;
+	text-decoration: underline;
 }
 
 .sticky .entry-title {
