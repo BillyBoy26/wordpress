@@ -287,9 +287,9 @@ input,
 select,
 textarea {
 	color: #222222;
-	font-family: "Open Sans", Georgia, serif;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-family: Verdana,"Open Sans", Georgia, serif;
+	font-size: 16px;
+	font-size: 1rem;
 	line-height: 1.7;
 	background: #FFFFFF;
 }
@@ -359,7 +359,7 @@ h1 {
 @media (min-width: 768px) {
 	h1 {
 		font-size: 32px;
-		font-size: 2rem;
+		font-size: 2.75rem;
 	}
 }
 
@@ -368,18 +368,27 @@ h2 {
 	letter-spacing: -0.2px;
 	font-size: 25px;
 	font-size: 1.5625rem;
+	margin-top: 40px;
 }
 
 @media (min-width: 768px) {
 	h2 {
 		font-size: 28px;
-		font-size: 1.75rem;
+		font-size: 2.25rem;
 	}
 }
 
 h3 {
 	font-size: 23px;
-	font-size: 1.4375rem;
+	font-size: 1.3rem;
+	margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+	h2 {
+		font-size: 23px;
+		font-size: 1.75rem;
+	}
 }
 
 h4 {
