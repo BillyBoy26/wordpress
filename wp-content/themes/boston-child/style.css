@@ -2366,3 +2366,13 @@ object {
     color:white;
 }
 
+/* a classique
+*/
+.link-theme {
+	color: #d65456 !important;
+	text-decoration: none;
+}
+.link-theme:hover {
+	text-decoration: underline;
+}
+
