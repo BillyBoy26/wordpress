@@ -41,7 +41,7 @@
 				<?php endif; ?>
 			</div>
 			<div id="topbar-search" class="topbar-search">
-				<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
+				<form action="<?php echo esc_url(home_url( '/' )) ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
 				    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
 				</form>
 				<div id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
@@ -85,10 +85,11 @@
 				</div>
 				<div id="topbar-search-fixed" class="topbar-search">
 					<?php do_action('boston_top_searchform'); ?>
-					<form action="<?php get_bloginfo('wpurl') ?>" method="get" aria-expanded="false" id="topbar-search-form-fixed" class="topbar-search-form">
+					<form action="<?php echo esc_url(home_url( '/' )) ?>" method="get" aria-expanded="false" id="topbar-search-form-fixed" class="topbar-search-form">
 					    <input type="search" name="s" id="search-fixed" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
 						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 					</form>
+
 					<div id="topbar-search-icon-fixed" class="topbar-search-icon" aria-label="search" aria-expanded="false">
 						<i class="fa fa-search" aria-hidden="true"></i>
 					</div>	
@@ -145,6 +146,5 @@
 			<?php get_template_part( 'template-parts/loop', 'featured' ); ?>
 		</div>
 	<?php endif; ?>
-
 	<div id="content" class="site-content">
 		<div class="container">
