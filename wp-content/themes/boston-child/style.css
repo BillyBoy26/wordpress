@@ -970,13 +970,13 @@ textarea {
 /* Site Branding */
 .site-branding {
 	padding:  3.125rem 0rem;
+	padding-top:0px;
 	text-align: center;
 	z-index: 1;
 }
 
 .site-branding .custom-logo-link {
-	margin-bottom: 30px;
-	margin-bottom: 1.875rem;
+	margin-bottom: 10px;
 	display: inline-block;
 }
 
