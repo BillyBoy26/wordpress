@@ -24,6 +24,13 @@
 				<p>
 					<?php printf( esc_html__( 'Copyright &copy; %1$s %2$s. All Rights Reserved.', 'boston' ), date('Y'), get_bloginfo( 'name' ) ); ?>
 				</p>
+				<p><?php 
+					printf( esc_html__('Silhouettes du logo fournies par : %s', 'boston'),
+						sprintf('<a href="%s" class="link-theme">%s</a>',
+							esc_url('https://vecteezy.com'),
+							esc_html__( 'Vector Art by Vecteezy!', 'boston' ))
+				 	);
+				?></p>
 			</div><!-- .site-info -->
 
 		</div>

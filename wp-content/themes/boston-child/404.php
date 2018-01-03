@@ -19,14 +19,12 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php 
-					printf( esc_html__('Il semble que rien n\'ait été trouvé à cet emplacement. Essayez peut-être une recherche ou retourner sur la page d\'%s ?', 'boston'),
+					printf( esc_html__('Il semble que rien n\'ait été trouvé à cet emplacement. Essayez peut-être une recherche ou retournez sur la page d\'%s ?', 'boston'),
 						sprintf('<a href="%s" class="link-theme">%s</a>',
 							esc_url( home_url( '/' )),
 							esc_html__( 'accueil', 'boston' ))
 				 	);
-
-
-					?>
+					?></p>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
