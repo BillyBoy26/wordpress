@@ -26,7 +26,7 @@
 				</p>
 				<p><?php 
 					printf( esc_html__('Silhouettes du logo fournies par : %s', 'boston'),
-						sprintf('<a href="%s" class="link-theme">%s</a>',
+						sprintf('<a href="%s" class="link-theme" target="_blank" rel="noopener">%s</a>',
 							esc_url('https://vecteezy.com'),
 							esc_html__( 'Vector Art by Vecteezy!', 'boston' ))
 				 	);

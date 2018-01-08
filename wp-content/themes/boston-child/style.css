@@ -1729,18 +1729,17 @@ a.entry-category {
 	font-weight: 600;
 	padding: 2px 6px;
 	text-transform: uppercase;
-	background: #000000;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	color: #fff;
+	background: #fff;
+	border: 1px solid #f1f1f1;
+	color: #777777;
 	position: relative;
 	top: -2px;
 	margin-left: 3px;
 }
 
-.comments-area .comments-title .add_yours a:hover {
-	background: #444;
+.comments-area .comments-title .add_yours a:hover, .comments-area .comments-title .add_yours a:focus  {
+	background: #D65456;
+	color:#fff;
 	text-decoration: none;
 }
 
@@ -1825,19 +1824,18 @@ a.entry-category {
 	font-weight: 600;
 	padding: 2px 6px;
 	text-transform: uppercase;
-	background: #000000;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	color: #FFF;
+	background: #fff;
+	border: 1px solid #f1f1f1;
+	color: #777777;
 	margin-left: 10px;
 	margin-left: 0.625rem;
 	position: relative;
 	top: -2px;
 }
 
-.comment-respond small a:hover {
-	background: #444444;
+.comment-respond small a:hover, .comment-respond small a:focus {
+	background: #D65456;
+	color:#fff;
 }
 
 .comment-form label {
@@ -2375,7 +2373,7 @@ object {
 }
 
 
-.form-submit .submit:hover {
+.form-submit .submit:focus, .form-submit .submit:hover {
     background-color: #D65456;
     color:white;
 }
