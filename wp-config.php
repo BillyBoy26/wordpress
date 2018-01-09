@@ -90,6 +90,9 @@ define( 'WP_DEBUG_DISPLAY', false );
 // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
 define( 'SCRIPT_DEBUG', true );
 
+// Forcer le HTTPS dans l'administration
+define('FORCE_SSL_ADMIN', true);
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
