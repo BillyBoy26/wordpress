@@ -26,6 +26,7 @@
 
 <script src="https://use.fontawesome.com/2ce0a6674a.js"></script>
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -44,9 +45,9 @@
 				<form action="<?php echo esc_url(home_url( '/' )) ?>" method="get" aria-expanded="false" id="topbar-search-form" class="topbar-search-form">
 				    <input type="search" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
 				</form>
-				<div id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
+				<button id="topbar-search-icon"  class="topbar-search-icon" aria-label="search" aria-expanded="false">
 						<i class="fa fa-search" aria-hidden="true"></i>
-				</div>	
+				</button>	
 			</div>
 		</div>
 		<div class="site-branding">
@@ -89,10 +90,9 @@
 					    <input type="search" name="s" id="search-fixed" value="<?php the_search_query(); ?>" placeholder="<?php esc_html_e('Search and hit enter...', 'boston') ?>" />
 						<!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 					</form>
-
-					<div id="topbar-search-icon-fixed" class="topbar-search-icon" aria-label="search" aria-expanded="false">
+					<button id="topbar-search-icon-fixed" class="topbar-search-icon" aria-label="search" aria-expanded="false">
 						<i class="fa fa-search" aria-hidden="true"></i>
-					</div>	
+					</button>	
 				</div>	
 			</div>
 		</div>	

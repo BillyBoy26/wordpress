@@ -59,31 +59,31 @@ input:focus {
 	align-self: center;
 	background-color: transparent;
 	color:black;
-	border-radius: 0px;
+	border: none; 
 	outline:none;
 }
 
-.social-button-container:hover{
+.social-button-container:hover, .social-button-container:focus{
 	background-color: #D65456;
 }
 
-.facebook a:hover{
+.facebook a:hover, .facebook a:focus{
 	color:#3b5998;
 }
 
-.googleplus a:hover{
+.googleplus a:hover, .googleplus a:focus{
 	color:#DD5044;
 }
 
-.instagram a:hover{
+.instagram a:hover, .instagram a:focus{
 	color:#C10261;
 }
 
-.twitter a:hover{
+.twitter a:hover, .twitter a:focus{
 	color:#4db2ec;
 }
 
-.pinterest a:hover{
+.pinterest a:hover, .pinterest a:focus{
 	color:#BC071A;
 }
 

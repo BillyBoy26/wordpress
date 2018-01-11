@@ -613,11 +613,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: none;
-	background: #000000;
+	background: #fff;
 	box-shadow: none;
-	color: #fff;
+	color: #777777;
 	font-size: 12px;
 	padding: 8px 24px;
+	border: 1px solid #f1f1f1;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -627,11 +628,12 @@ input[type="submit"] {
 	letter-spacing: 1.4px;
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #444444;
+button:hover, button:focus,
+input[type="button"]:hover, input[type="button"]:focus,
+input[type="reset"]:hover, input[type="reset"]:focus,
+input[type="submit"]:hover, input[type="submit"]:focus {
+	background: #d75455;
+	color:#fff;
 }
 
 input[type="text"],
@@ -919,7 +921,10 @@ textarea {
 	cursor: pointer;
 	align-self: center;
 	text-align: center;
+	border:none;
+	outline: none;
     display: table;
+    color:black;
 }
 
 .topbar-search-form {
@@ -927,18 +932,21 @@ textarea {
 	right: -5px;
 	top:0px;
 	width: 0px;
+	visibility: hidden;
 	border: none;
-	transition: width 0.7s ease;
+	transition: visibility 0s linear 0.7s, width 0.7s ease;
 	overflow: hidden;
 }
 
 .open .topbar-search-form {
 	width: 300px;
+	visibility: visible;
+	transition-delay:0s;
 	border: 1px solid #eee;
 }
 
 
-.topbar-search-icon:hover , .open .topbar-search-icon{
+.topbar-search-icon:hover, .topbar-search-icon:focus, .open .topbar-search-icon{
 	background-color: #D65456;
 }
 
@@ -1401,6 +1409,13 @@ textarea {
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
 				0 3px 1px -2px rgba(0,0,0,.2), 
 				0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+
+@media (min-width: 992px) {
+	#layout-drawer {
+		display: none;
+	}
 }
 
 #layout-drawer.toggled {

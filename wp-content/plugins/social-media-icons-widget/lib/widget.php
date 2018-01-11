@@ -26,36 +26,36 @@
 		if(!$siw_always_straight) {
 			wp_enqueue_script('plugin', plugin_dir_url(__FILE__) . '../js/plugin.js'); ?>
 	
-			<button id="share-button" class="social-button-container" type="button"">
-	 			<i class="fa fa-share-alt social-share-button "/></i>
+			<button id="share-button" class="social-button-container" aria-label="open-social-media" type="button"">
+	 			<i class="fa fa-share-alt social-share-button" aria-hidden="true"/></i>
 	 		</button>
 
 	<?php } //if !$siw_always_straight end ?>
 
 	<ul id="social-icons">
 		<li class="facebook">
-			<a href="https://www.facebook.com/%C3%89cole-Base-Paris-%C3%A0-linstitut-National-du-Judo-1477862432307396/">
-				<i class="fa fa-facebook"></i>
+			<a href="https://www.facebook.com/%C3%89cole-Base-Paris-%C3%A0-linstitut-National-du-Judo-1477862432307396/" target="_blank" rel="noopener">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
 			</a>
 		</li>
 		<li class="googleplus">
-			<a href="https://plus.google.com/u/0/104851237243935102246"">
-				<i class="fa fa-google-plus"></i>
+			<a href="https://plus.google.com/u/0/104851237243935102246" target="_blank" rel="noopener">
+				<i class="fa fa-google-plus" aria-hidden="true"></i>
 			</a>
 		</li>
 		<li class="instagram">
-			<a href="https://www.instagram.com/deniscasselle/?hl=fr">
-				<i class="fa fa-instagram"></i>
+			<a href="https://www.instagram.com/deniscasselle/?hl=fr" target="_blank" rel="noopener">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
 			</a>
 		</li>
 		<li class="twitter">
-			<a href="https://twitter.com/Polegar5">
-				<i class="fa fa-twitter"></i>
+			<a href="https://twitter.com/Polegar5" target="_blank" rel="noopener">
+				<i class="fa fa-twitter" aria-hidden="true"></i>
 			</a>
 		</li>
 		<li class="pinterest">
-			<a href="https://pinterest.com/">
-				<i class="fa fa-pinterest"></i>
+			<a href="https://pinterest.com/" target="_blank" rel="noopener">
+				<i class="fa fa-pinterest" aria-hidden="true"></i>
 			</a>
 		</li>
 	</ul>
